@@ -1,0 +1,30 @@
+{
+  "name": "trello-commits",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "sass": "npx sass --watch index.scss index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mauricio-Monsalve/Trello-commits.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mauricio-Monsalve/Trello-commits/issues"
+  },
+  "homepage": "https://github.com/Mauricio-Monsalve/Trello-commits#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.87.0",
+    "vite": "^6.3.2"
+  },
+  "dependencies": {
+    "extract-uri-image": "^1.0.2"
+  }
+}
