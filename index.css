@@ -25,4 +25,186 @@ body {
   overflow: hidden;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right bottom, dodgerblue 20%, cornflowerblue 80%);
+  position: fixed;
+  left: 0;
+  right: 0;
+  transition: top 0.3s ease;
+  z-index: 1;
+}
+header > * {
+  padding: 10px;
+}
+header .header-left {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: var(--header-height);
+}
+header .header-left img {
+  border-radius: 15%;
+  height: 100%;
+}
+header .header-left h1 {
+  font-size: calc(var(--header-height) / 1.5);
+}
+header .header-right {
+  display: flex;
+  height: var(--header-height);
+}
+header .header-right:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+header .header-right:hover > div > ul {
+  transform: translateY(0) scaleY(1);
+}
+header .header-right.hide-list > div > ul {
+  transform: translateY(-50%) scaleY(0);
+}
+header .header-right > label {
+  display: none;
+}
+header .header-right > label > input {
+  display: none;
+}
+header .header-right > label > input > img {
+  display: flex;
+  height: 100%;
+}
+header .header-right > div {
+  display: flex;
+  height: 100%;
+  gap: 2vh;
+}
+header .header-right > div > span {
+  color: white;
+  font-size: calc(var(--header-height) / 3);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  overflow-wrap: anywhere;
+}
+header .header-right > div > .user-image {
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+header .header-right > div > ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 10px;
+  top: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  cursor: pointer;
+  transform: translateY(-50%) scaleY(0);
+  transition: transform 0.3s ease;
+}
+header .header-right > div > ul > li {
+  display: flex;
+  align-items: center;
+  min-width: 150px;
+  font-size: large;
+  padding: 2vh 4vh;
+}
+header .header-right > div > ul > li:hover {
+  background-color: cornsilk;
+}
+
+@media screen and (max-aspect-ratio: 4/5), screen and (min-aspect-ratio: 2/1) {
+  header .header-left h1 {
+    display: none;
+  }
+  header .header-right label {
+    display: flex;
+  }
+  header .header-right label input:checked {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100dvh;
+    opacity: 0;
+  }
+  header .header-right:has(label > input:checked) > div {
+    right: 0;
+    opacity: 1;
+    transition: right 0.3s ease, opacity 0s ease 0s;
+  }
+  header .header-right > div {
+    position: absolute;
+    top: 100%;
+    height: calc(100vh - (var(--header-height)));
+    width: 90vw;
+    right: -90vw;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    opacity: 0;
+    background: linear-gradient(to top, dodgerblue 95%, mediumblue 200%);
+    transition: right 0.3s ease, opacity 0s ease 0.3s;
+  }
+  header .header-right > div span {
+    justify-content: center;
+    text-align: center;
+    font-size: 4vh;
+    height: unset;
+  }
+  header .header-right > div .user-image {
+    width: 50%;
+    height: unset;
+    margin: 5vh;
+  }
+  header .header-right > div ul {
+    all: unset;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+  }
+  header .header-right > div ul li {
+    all: unset;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    font-size: 5vw;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+    background-color: white;
+    color: dodgerblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+    cursor: pointer;
+  }
+  header .header-right > div ul li:hover {
+    background-color: aliceblue;
+  }
+}
+@media screen and (min-aspect-ratio: 5/4) {
+  header .header-right > div {
+    width: 30vw;
+    justify-content: flex-end;
+  }
+  header .header-right > div ul > li {
+    font-size: 4vh;
+  }
+}
+@media screen and (max-height: 300px) {
+  :root {
+    --header-height: 30px;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
