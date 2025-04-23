@@ -192,6 +192,50 @@
 
         </div>
 
+        <div class="modal-datos modal-hidden">
+
+            <div class="cont-modal">
+                <h2>Modificar datos</h2>
+                <form class="diferente">
+                    <label>
+                        <span>Nombre</span>
+                        <input type="text" name="nombre" id="inputModName" required minlength="3" maxlength="20">
+                    </label>
+                    <label>
+                        <span>Apellido</span>
+                        <input type="text" name="apellido" id="inputModLastName" required minlength="3" maxlength="20">
+                    </label>
+                    
+                    <label for="inputAge">
+                        <span>Edad</span>
+                        <input type="number" name="edad" id="inputModAge" required min="10">
+                    </label>
+                    <label>
+                        <span>Correo</span>
+                        <input type="email" name="correo" id="inputModEmail" required>
+                    </label>
+                    <label>
+                        <span>Contraseña anterior</span>
+                        <input type="password" name="contraseña" id="inputModLastPass" required>
+                    </label>
+                    <label>
+                        <span>Nueva contraseña</span>
+                        <input type="password" name="contraseña" id="inputModNewPass" required>
+                    </label>
+                    <label>
+                        <span>Confirmar contraseña</span>
+                        <input type="password" name="contraseña" id="inputModNewPassConfirm" required>
+                    </label>
+                    <div>
+                        <button type="button">Cancelar</button>
+                        <button type="submit">Modificar</button>
+                    </div>
+                </form>
+                <p class="error-p"></p>
+            </div>
+            
+        </div>
+
     </main>
     <script type="module" src="./index.js" defer></script>
 </body>
