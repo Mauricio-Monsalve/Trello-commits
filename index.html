@@ -29,6 +29,60 @@
         </div>
     </header>
     <main>
+        <div id="cont-regis" class="cont-regis show-card">
+
+            <section id="sect-login">
+                <h2>Iniciar sesion</h2>
+                <form id="form-login">
+                    <label>
+                        <span>Correo</span>
+                        <input type="email" name="correo" id="inputEmail" required>
+                    </label>
+                    <label>
+                        <span>Contraseña</span>
+                        <input type="password" name="contraseña" id="inputPass" required>
+                    </label>
+                    <button type="submit">Iniciar sesión</button>
+                </form>
+                <p class="error-p"></p>
+                <a href="#" class="link-change">No tengo cuenta</a>
+            </section>
+
+            <section id="sect-regis">
+                <h2>Registrarse</h2>
+                <form id="form-regis">
+                    <label>
+                        <span>Nombre</span>
+                        <input type="text" name="nombre" id="inputName" required minlength="3" maxlength="20">
+                    </label>
+                    <label>
+                        <span>Apellido</span>
+                        <input type="text" name="apellido" id="inputLastName" required minlength="3" maxlength="20">
+                    </label>
+                    
+                    <label for="inputAge">
+                        <span>Edad</span>
+                        <input type="number" name="edad" id="inputAge" required min="10">
+                    </label>
+                    <label>
+                        <span>Correo</span>
+                        <input type="email" name="correo" id="inputRegEmail" required>
+                    </label>
+                    <label>
+                        <span>Contraseña</span>
+                        <input type="password" name="contraseña" id="inputRegPass" required>
+                    </label>
+                    <label>
+                        <span>Confirmar contraseña</span>
+                        <input type="password" name="contraseña" id="inputRegPassConfirm" required>
+                    </label>
+                    <button type="submit">Registrarse</button>
+                </form>
+                <p class="error-p"></p>
+                <a href="#" class="link-change">Ya tengo cuenta</a>
+            </section>
+
+        </div>
 
     </main>
     <script type="module" src="./index.js" defer></script>
